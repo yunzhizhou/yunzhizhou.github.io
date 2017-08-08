@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>使用Python求金融中的现值与终值 | 蚱蜢舟</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1%matplotlib inline 使用Python求金融中的现值(Pv)与终值(Fv)1. 概念资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。 2. 已知现值求终值公式:  F=P×(1+i)^n＝P×（F/P，i，n） 2.1 示例一将100元存入银行，利率假设为10">
+  <meta name="description" content="1%matplotlib inline 使用Python求金融中的现值(Pv)与终值(Fv)1. 概念资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。 2. 已知现值求终值 公式:  F=P×(1+i)^n＝P×（F/P，i，n） fv(利率, 期数, 每期投入, 初始投入)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Python求金融中的现值与终值">
 <meta property="og:url" content="http://yoursite.com/2017/08/07/使用Python求金融中的现值与终值/index.html">
 <meta property="og:site_name" content="蚱蜢舟">
-<meta property="og:description" content="1%matplotlib inline 使用Python求金融中的现值(Pv)与终值(Fv)1. 概念资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。 2. 已知现值求终值公式:  F=P×(1+i)^n＝P×（F/P，i，n） 2.1 示例一将100元存入银行，利率假设为10">
-<meta property="og:updated_time" content="2017-08-07T14:35:19.462Z">
+<meta property="og:description" content="1%matplotlib inline 使用Python求金融中的现值(Pv)与终值(Fv)1. 概念资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。 2. 已知现值求终值 公式:  F=P×(1+i)^n＝P×（F/P，i，n） fv(利率, 期数, 每期投入, 初始投入)">
+<meta property="og:updated_time" content="2017-08-08T13:53:34.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Python求金融中的现值与终值">
-<meta name="twitter:description" content="1%matplotlib inline 使用Python求金融中的现值(Pv)与终值(Fv)1. 概念资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。 2. 已知现值求终值公式:  F=P×(1+i)^n＝P×（F/P，i，n） 2.1 示例一将100元存入银行，利率假设为10">
+<meta name="twitter:description" content="1%matplotlib inline 使用Python求金融中的现值(Pv)与终值(Fv)1. 概念资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。 2. 已知现值求终值 公式:  F=P×(1+i)^n＝P×（F/P，i，n） fv(利率, 期数, 每期投入, 初始投入)">
   
     <link rel="alternative" href="/atom.xml" title="蚱蜢舟" type="application/atom+xml">
   
@@ -175,12 +175,24 @@
       
         <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">%matplotlib inline</div></pre></td></tr></table></figure>
 <h2 id="使用Python求金融中的现值-Pv-与终值-Fv"><a href="#使用Python求金融中的现值-Pv-与终值-Fv" class="headerlink" title="使用Python求金融中的现值(Pv)与终值(Fv)"></a>使用Python求金融中的现值(Pv)与终值(Fv)</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h3><p>资本的时间价值一般分为单利与复利计算. 本处在未说明的情况下,是指复利计算.<br>终值(Future value)，是指现在某一时点上的一定量现金折合到未来的价值，俗称本利和。</p>
-<h3 id="2-已知现值求终值"><a href="#2-已知现值求终值" class="headerlink" title="2. 已知现值求终值"></a>2. 已知现值求终值</h3><p>公式:  F=P×(1+i)^n＝P×（F/P，i，n）</p>
+<h3 id="2-已知现值求终值"><a href="#2-已知现值求终值" class="headerlink" title="2. 已知现值求终值"></a>2. 已知现值求终值</h3><ul>
+<li>公式:  F=P×(1+i)^n＝P×（F/P，i，n）</li>
+<li>fv(利率, 期数, 每期投入, 初始投入)</li>
+</ul>
 <h4 id="2-1-示例一"><a href="#2-1-示例一" class="headerlink" title="2.1 示例一"></a>2.1 示例一</h4><p>将100元存入银行，利率假设为10%，两年后的终值是多少？</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">print(<span class="string">"两年后的终值是:%s"</span> % np.fv(<span class="number">.1</span>,<span class="number">2</span>,<span class="number">0</span>, <span class="number">-100</span> ))</div></pre></td></tr></table></figure>
-<pre><code>两年后的终值是:121.0
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">print(<span class="string">"两年后的终值是:%.1f元"</span> % np.fv(<span class="number">.1</span>,<span class="number">2</span>,<span class="number">0</span>, <span class="number">-100</span> ))</div></pre></td></tr></table></figure>
+<pre><code>两年后的终值是:121.0元
+</code></pre><h4 id="2-2-示例二"><a href="#2-2-示例二" class="headerlink" title="2.2 示例二"></a>2.2 示例二</h4><p>在3年中,每年年底存入银行1000元,存款利率为8%, 求3年末的终值是多少?</p>
+<p>1000*(1.08^2 + 1.08 + 1) = 3246.4</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">print(<span class="string">"两年后的终值是:%.1f元"</span> % np.fv(<span class="number">.08</span>, <span class="number">3</span>, <span class="number">-1000</span>, <span class="number">0</span>))</div></pre></td></tr></table></figure>
+<pre><code>两年后的终值是:3246.4元
+</code></pre><h3 id="3-已知终值求现值"><a href="#3-已知终值求现值" class="headerlink" title="3. 已知终值求现值"></a>3. 已知终值求现值</h3><h4 id="3-1-示例一"><a href="#3-1-示例一" class="headerlink" title="3.1 示例一"></a>3.1 示例一</h4><p>小明计划3年后得到1000元,年利率为10%,请问小明现在应该存多少钱?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">print(<span class="string">"现在应该存:%.1f元"</span> % np.pv(<span class="number">.1</span>,<span class="number">3</span>, <span class="number">0</span>, <span class="number">-1000</span>))</div></pre></td></tr></table></figure>
+<pre><code>现在应该存:751.3元
+</code></pre><h4 id="3-2-实例二"><a href="#3-2-实例二" class="headerlink" title="3.2 实例二"></a>3.2 实例二</h4><p>小明现在存了一笔钱,年利率为10%,准备在以后的10年内每年末得到1000元, 请问小明现在应该存多少钱?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">print(<span class="string">"现在应该存:%.1f元"</span> % np.pv(<span class="number">.1</span>,<span class="number">10</span>, <span class="number">-1000</span>, <span class="number">0</span>))</div></pre></td></tr></table></figure>
+<pre><code>现在应该存:6144.6元
+</code></pre>
       
 
       

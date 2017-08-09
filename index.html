@@ -160,6 +160,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python与内部收益率IRR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/09/python与内部收益率IRR/">python与内部收益率IRR</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/09/python与内部收益率IRR/" class="archive-article-date">
+  	<time datetime="2017-08-09T13:39:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">%matplotlib inline</div></pre></td></tr></table></figure>
+<h3 id="1-内部收益率"><a href="#1-内部收益率" class="headerlink" title="1. 内部收益率"></a>1. 内部收益率</h3><p>内部收益率,Internal Rate of Return, 简称IRR.是反映工程项目经济效果得一个指标.指投资项目在建设和生产服务期内,净现金流量值等于0时的贴现率.这种分析方法考虑了货币的时间价值，可以测算各方案的获利能力，因此它是投资预测分析的重要方法之一。<br>∑(CI(i) - CO(i))* a(i) = 0</p>
+<ul>
+<li>CI(i): 第i年的现金流入</li>
+<li>CO(i): 第i年的现金流出</li>
+<li>a(i): 第i年的贴现率</li>
+</ul>
+<h3 id="2-例子"><a href="#2-例子" class="headerlink" title="2. 例子"></a>2. 例子</h3><p>某个项目之初投入150万元；第一年项目利润12万元；第二年利润15万元，但是扩大生产又额外投入了50万元，扣除当年的利润15万元，实际净投入了35万元；第三年利润18万元；第四年将项目转让可收回280万元。这个项目列年的净现金流是-150,12，-35,18，280。</p>
+<h3 id="3-假设"><a href="#3-假设" class="headerlink" title="3.假设"></a>3.假设</h3><p>要计算这个项目的收益率，就必须先假设一个平均年收益率R，它就意味着你在项目之初投入1元，第一年末就收入1<em>(1+R)，第二年末就收入1</em>(1+R)^2，第三年末就收入1<em>(1+R)^3，第四年末就收入1</em>(1+R)^4。那么折现就是倒过来，比如要想第4年末收到1元，那么只要在项目之初投入1/(1+R)^4即可。</p>
+<h3 id="4-解释"><a href="#4-解释" class="headerlink" title="4.解释"></a>4.解释</h3><p>利用这个假设的平均年收益率R，可以很容易列出方程：项目之初的投入=项目过程中所有净现金流按照R折现后的现值之和。即方程为:  </p>
+<blockquote>
+<p>150 = 12/(1+R) + (-35)/(1+R)^2 + 18/(1+R)^3 + 280/(1+R)^4</p>
+</blockquote>
+<h3 id="5-说明"><a href="#5-说明" class="headerlink" title="5.说明"></a>5.说明</h3><p>当现行的银行贷款利率以及融资成本高于这个内部收益率的时候，就说明你的投资是不合算的.</p>
+<h3 id="6-python-代码"><a href="#6-python-代码" class="headerlink" title="6.python 代码"></a>6.python 代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">irr = np.irr([<span class="number">-150</span>, <span class="number">12</span>, <span class="number">-35</span>, <span class="number">18</span>, <span class="number">280</span>])*<span class="number">100</span></div><div class="line">print(<span class="string">"内部收益率(IRR)是: %.2f%%"</span> % irr)</div></pre></td></tr></table></figure>
+<pre><code>内部收益率(IRR)是: 16.10%
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/09/python与内部收益率IRR/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-用python实现KNN" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

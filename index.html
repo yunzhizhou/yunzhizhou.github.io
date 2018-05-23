@@ -150,6 +150,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Powershell之记录自己输入的脚本-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/23/Powershell之记录自己输入的脚本-1/">Powershell之记录自己输入的脚本(1)</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/23/Powershell之记录自己输入的脚本-1/" class="archive-article-date">
+  	<time datetime="2018-05-23T05:54:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-相关函数"><a href="#1-相关函数" class="headerlink" title="1.相关函数"></a>1.相关函数</h3><blockquote>
+<p>Start-Transcript<br>Stop-Transcript</p>
+</blockquote>
+<h3 id="2-首先启动powershell-记得以管理员身份运行"><a href="#2-首先启动powershell-记得以管理员身份运行" class="headerlink" title="2.首先启动powershell,记得以管理员身份运行"></a>2.首先启动powershell,记得以<strong>管理员</strong>身份运行</h3><p><img src="2018052301.jpg" alt="jpg"></p>
+<h3 id="3-开始记录"><a href="#3-开始记录" class="headerlink" title="3.开始记录"></a>3.开始记录</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Start-Transcript</span> d:\start.txt -Force</div></pre></td></tr></table></figure>
+<p><img src="2018052302.jpg" alt="jpg"></p>
+<h3 id="4-开始自己的命令行操作-比如"><a href="#4-开始自己的命令行操作-比如" class="headerlink" title="4.开始自己的命令行操作,比如"></a>4.开始自己的命令行操作,比如</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Get-Servcie</div></pre></td></tr></table></figure>
+<p><img src="2018052303.jpg" alt="jpg"></p>
+<h3 id="5-停止记录"><a href="#5-停止记录" class="headerlink" title="5.停止记录"></a>5.停止记录</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Stop-Transcript</span></div></pre></td></tr></table></figure>
+<p><img src="2018052304.jpg" alt="jpg"></p>
+<h3 id="6-查看d-start-txt"><a href="#6-查看d-start-txt" class="headerlink" title="6.查看d:\start.txt"></a>6.查看d:\start.txt</h3><blockquote>
+<p>start.txt 记录了你的输入,以及输出  </p>
+</blockquote>
+<p><img src="2018052305.jpg" alt="jpg"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/23/Powershell之记录自己输入的脚本-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-决策树系列之信息熵" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1807,7 +1883,7 @@ the classifer came back with:9, the real answer is 9, the accurency is 98%
 
         
         <a href="/2017/08/03/hello-world/" class="archive-article-date">
-  	<time datetime="2017-08-03T12:35:54.635Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
+  	<time datetime="2017-08-03T12:35:54.636Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
 </a>
         
       </header>
@@ -1876,7 +1952,7 @@ the classifer came back with:9, the real answer is 9, the accurency is 98%
         <div id="footer-info">
             <div class="footer-left">
                 &copy;
-                2017
+                2018
                     蚱蜢舟
             </div>
             <div class="footer-right">

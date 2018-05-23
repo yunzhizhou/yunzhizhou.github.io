@@ -9,17 +9,27 @@
         <link rel="dns-prefetch" href="http://yoursite.com">
         <title>
             
-                Archives: 2017 |
+                Powershell之记录自己输入的脚本(1) |
                     
                         蚱蜢舟
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta property="og:type" content="website">
-<meta property="og:title" content="蚱蜢舟">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+        <meta name="description" content="1.相关函数 Start-TranscriptStop-Transcript  2.首先启动powershell,记得以管理员身份运行 3.开始记录1Start-Transcript d:\start.txt -Force  4.开始自己的命令行操作,比如1Get-Servcie  5.停止记录1Stop-Transcript  6.查看d:\start.txt start.txt 记录了你的输入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Powershell之记录自己输入的脚本(1)">
+<meta property="og:url" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/index.html">
 <meta property="og:site_name" content="蚱蜢舟">
+<meta property="og:description" content="1.相关函数 Start-TranscriptStop-Transcript  2.首先启动powershell,记得以管理员身份运行 3.开始记录1Start-Transcript d:\start.txt -Force  4.开始自己的命令行操作,比如1Get-Servcie  5.停止记录1Stop-Transcript  6.查看d:\start.txt start.txt 记录了你的输入">
+<meta property="og:image" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/2018052301.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/2018052302.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/2018052303.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/2018052304.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/2018052305.jpg">
+<meta property="og:updated_time" content="2018-05-23T13:06:50.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蚱蜢舟">
+<meta name="twitter:title" content="Powershell之记录自己输入的脚本(1)">
+<meta name="twitter:description" content="1.相关函数 Start-TranscriptStop-Transcript  2.首先启动powershell,记得以管理员身份运行 3.开始记录1Start-Transcript d:\start.txt -Force  4.开始自己的命令行操作,比如1Get-Servcie  5.停止记录1Stop-Transcript  6.查看d:\start.txt start.txt 记录了你的输入">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/2018052301.jpg">
             
                 <link rel="alternative" href="/atom.xml" title="蚱蜢舟" type="application/atom+xml">
                 
@@ -150,179 +160,167 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Powershell之记录自己输入的脚本-1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Powershell之记录自己输入的脚本(1)
+    </h1>
+  
+
+        
+        <a href="/2018/05/23/Powershell之记录自己输入的脚本-1/" class="archive-article-date">
+  	<time datetime="2018-05-23T05:54:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-相关函数"><a href="#1-相关函数" class="headerlink" title="1.相关函数"></a>1.相关函数</h3><blockquote>
+<p>Start-Transcript<br>Stop-Transcript</p>
+</blockquote>
+<h3 id="2-首先启动powershell-记得以管理员身份运行"><a href="#2-首先启动powershell-记得以管理员身份运行" class="headerlink" title="2.首先启动powershell,记得以管理员身份运行"></a>2.首先启动powershell,记得以<strong>管理员</strong>身份运行</h3><p><img src="2018052301.jpg" alt="jpg"></p>
+<h3 id="3-开始记录"><a href="#3-开始记录" class="headerlink" title="3.开始记录"></a>3.开始记录</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Start-Transcript</span> d:\start.txt -Force</div></pre></td></tr></table></figure>
+<p><img src="2018052302.jpg" alt="jpg"></p>
+<h3 id="4-开始自己的命令行操作-比如"><a href="#4-开始自己的命令行操作-比如" class="headerlink" title="4.开始自己的命令行操作,比如"></a>4.开始自己的命令行操作,比如</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Get-Servcie</div></pre></td></tr></table></figure>
+<p><img src="2018052303.jpg" alt="jpg"></p>
+<h3 id="5-停止记录"><a href="#5-停止记录" class="headerlink" title="5.停止记录"></a>5.停止记录</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Stop-Transcript</span></div></pre></td></tr></table></figure>
+<p><img src="2018052304.jpg" alt="jpg"></p>
+<h3 id="6-查看d-start-txt"><a href="#6-查看d-start-txt" class="headerlink" title="6.查看d:\start.txt"></a>6.查看d:\start.txt</h3><blockquote>
+<p>start.txt 记录了你的输入,以及输出  </p>
+</blockquote>
+<p><img src="2018052305.jpg" alt="jpg"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/28/决策树系列之信息熵/" class="archive-article-date">
-  	<time datetime="2017-08-28T14:03:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/28/决策树系列之信息熵/">决策树系列之信息熵</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">python 熵</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/05/23/Powershell之记录自己输入的脚本-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/09/python与内部收益率IRR/" class="archive-article-date">
-  	<time datetime="2017-08-09T13:39:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/28/决策树系列之信息熵/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">决策树系列之信息熵</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/09/python与内部收益率IRR/">python与内部收益率IRR</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/09/用python实现KNN/" class="archive-article-date">
-  	<time datetime="2017-08-09T02:27:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/09/用python实现KNN/">用python实现KNN</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python KNN numpy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/07/使用Python求金融中的现值与终值/" class="archive-article-date">
-  	<time datetime="2017-08-07T14:34:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/07/使用Python求金融中的现值与终值/">使用Python求金融中的现值与终值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/03/hello-world/" class="archive-article-date">
-  	<time datetime="2017-08-03T12:35:54.636Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -348,8 +346,8 @@
     var yiliaConfig = {
         mathjax: false,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         open_in_new: false,
